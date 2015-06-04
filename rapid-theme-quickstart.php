@@ -26,8 +26,8 @@
 
 
 // Custom Theme Options
-function my_theme_admin_init() {
-     register_setting('my_options', 'my_theme_options');
+function devc_theme_admin_init() {
+     register_setting('devc_options', 'devc_theme_options');
 }
 
 function setup_theme_admin_menus() {
@@ -51,9 +51,9 @@ function theme_front_page_settings() {
 <form method="post" action="options.php">
     <?php 
     // Load the options from the WP db
-    $options = get_option('my_theme_options');
+    $options = get_option('devc_theme_options');
     // WP built-in function to display the appropriate fields for saving options
-    settings_fields("my_options"); ?>
+    settings_fields("devc_options"); ?>
 
     
     <h3>Footer area scripts</h3>
@@ -67,7 +67,7 @@ function theme_front_page_settings() {
 	    </tr>
 		
 	<td>
-	<textarea rows="20" cols="50" name="my_theme_options[ext_links]" value="<?php echo stripslashes($options["ext_links"]); ?>" />
+	<textarea rows="20" cols="50" name="devc_theme_options[ext_links]" value="<?php echo stripslashes($options["ext_links"]); ?>" />
 	
 //slider config	
 // Details at http://kenwheeler.github.io/slick/
@@ -136,7 +136,7 @@ if ($thechoice == "YES" || $thechoice == "Yes" || $thechoice == "yes") { ?>
 <?php
 }
 	
-add_action("admin_init", "my_theme_admin_init");
+add_action("admin_init", "devc_theme_admin_init");
 add_action("admin_menu", "setup_theme_admin_menus");
 
 
@@ -168,7 +168,7 @@ function s_theme_footer_stuff() {
 <script type="text/javascript">
 
 <?php
-	$options = get_option('my_theme_options');
+	$options = get_option('devc_theme_options');
 	echo stripslashes($options["ext_links"]); 
 ?>	
 
@@ -188,8 +188,8 @@ function s_scripts_method() {
 	// Now for the Scripts
 	
 	// Add jQuery the right way: http://css-tricks.com/snippets/wordpress/include-jquery-in-wordpress-theme/
-	if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
-	function my_jquery_enqueue() {
+	if (!is_admin()) add_action("wp_enqueue_scripts", "devc_jquery_enqueue", 11);
+	function devc_jquery_enqueue() {
 	   wp_deregister_script('jquery');
 	   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", false, null);
 	   wp_enqueue_script('jquery');
@@ -245,7 +245,7 @@ add_theme_support( 'post-thumbnails' );
 require_once  dirname( __FILE__ ) . '/inc/class-tgm-plugin-activation.php';
 
 
-add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
+add_action( 'tgmpa_register', 'devc_theme_register_required_plugins' );
 /**
  * Register the required plugins for this theme.
  *
@@ -258,7 +258,7 @@ add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
  * This function is hooked into tgmpa_init, which is fired within the
  * TGM_Plugin_Activation class constructor.
  */
-function my_theme_register_required_plugins() {
+function devc_theme_register_required_plugins() {
 
 	/**
 	 * Array of plugin arrays. Required keys are name and slug.
