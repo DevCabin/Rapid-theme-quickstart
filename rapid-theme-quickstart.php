@@ -31,7 +31,7 @@ function devc_theme_admin_init() {
 }
 
 function setup_theme_admin_menus() {
-    add_menu_page('Theme settings', 'devcabin Options', 'manage_options', 
+    add_menu_page('Theme settings', 'Theme Options', 'manage_options', 
         'devcabin_theme_settings', 'theme_front_page_settings');
          
     add_submenu_page('devcabin_theme_settings', 
