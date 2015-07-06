@@ -375,58 +375,21 @@ function devc_theme_register_required_plugins() {
 
 }
 
-
-
-
-
-
-
-
 /*
-SO the plan ...
-
+The plan:
 Pull in bootstrap - DONE
 Add plugin activator (optional I suppose)
 Modernizr - DONE
 Slick Slider (all files!) - DONE
 add_theme_support( 'post-thumbnails' ); - DONE
 En Q jQuery -DONE
-
 Function string limit words - DONE
-
-Dynamic meta into head - and apparently title now too
+Dynamic meta into head - that and apparently title now too 
+already handled by _S starter theme
 Also the backward compatible shims - DONE
-
 Footer scripts (slider and search word changer - must be editable!!)
 - DONE
-
 WISH LIST - pre-launch checklist
-
 Possibly some code snippet notes? maybe hide-able like the checklist?
-
 Maybe add the full meta to single
-
-+++++++++++++++++++++++++++++
-After hack email 1/16/15
-+++++++++++++++++++++++++++++
-
-
-    Restore any affected files to an earlier date (this is only a temporary fix).
-    Change all of your passwords, including FTP Manager, Admin pages, etc.
-    Make sure you have the most updated version of WordPress and any plugins you are using.
-    Temporarily disable all plugins.
-    Temporarily disable all comments. A simple way is to upload this plugin: Disable Comments for WordPress. Make sure you activate it.
-    Install the WordPress Firewall plugin. Activate it.
-    Install the WP Security Scan plugin. Activate it. Let it scan your site and then you should fix any errors or problems that it shows you.
-    Add a .htaccess file to your wp-admin folder for extra security.
-    Then password protect your wp-admin folder (using the “Permissions” menu option)
-    Change the permissions on your wp-config.php file, all of your .htaccess files, and all index.php files to add extra security. (Uncheck the “write” box in the “Permissions” menu option).
-    Double check your files again to make sure that the virus hasn’t returned in the time it took you to make the above changes. If it has returned, remove the virus code and save the changes, making sure not to undo any of the permission changes you just made.
-    Monitor your site for the next 24-48 hours before you know for sure that it’s gone. Check on your website every 2-6 hours to see if the virus pops up again.
-    Request reconsideration of your site once you know that the virus is gone.
-    Backup ALL your files
-    Keep the Firewall plugin and the Security Scan plugins enabled to block any future attacks.
-
-
-
 */
